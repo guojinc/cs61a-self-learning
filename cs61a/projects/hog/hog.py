@@ -65,6 +65,9 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     assert opponent_score < 100, 'The game should be over.'
     # BEGIN PROBLEM 3
     "*** YOUR CODE HERE ***"
+    if num_rolls == 0:
+        return free_bacon(opponent_score)
+    return roll_dice(num_rolls, dice)
     # END PROBLEM 3
 
 
@@ -87,6 +90,8 @@ def swine_align(player_score, opponent_score):
     """
     # BEGIN PROBLEM 4a
     "*** YOUR CODE HERE ***"
+    if gcd(player_score, opponent_score) >= 10:
+        return True
     # END PROBLEM 4a
 
 
@@ -109,6 +114,8 @@ def pig_pass(player_score, opponent_score):
     """
     # BEGIN PROBLEM 4b
     "*** YOUR CODE HERE ***"
+    if opponent_score - player_score < 3 and opponent_score - player_score > 0:
+        return True
     # END PROBLEM 4b
 
 
