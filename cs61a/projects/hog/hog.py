@@ -92,6 +92,7 @@ def swine_align(player_score, opponent_score):
     "*** YOUR CODE HERE ***"
     if gcd(player_score, opponent_score) >= 10:
         return True
+    return False
     # END PROBLEM 4a
 
 
@@ -116,6 +117,7 @@ def pig_pass(player_score, opponent_score):
     "*** YOUR CODE HERE ***"
     if opponent_score - player_score < 3 and opponent_score - player_score > 0:
         return True
+    return False
     # END PROBLEM 4b
 
 
